@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Kau Yatun | El mejor hotel del Sur argentino</title>
+</head>
+<body>
+  <!-- Sistema de grillas -->
+  <!-- container > row > col -->
+  <!-- El .container tendrá un ancho fijo en PX -->
+  <nav>
+    <div class="container">
+      <!-- Logo -->
+      <h1>
+        <a href="index.html">
+          <img src="images/logo.png" alt="Hotel Kau Yatun">
+        </a>
+      </h1>
+
+      <!-- ul>li*6>a -->
+      <!-- Menú principal -->
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#habitaciones">Habitaciones</a></li>
+        <li><a href="#promociones">Promociones</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="restaurante.html">Restaurante</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <!-- Idiomas -->
+      <div>
+        <a href="../index.html"><img src="images/esp.jpg" alt=""></a>
+        <a href="en/index.html"><img src="images/flag-en.png" alt=""></a>
+      </div>
+    </div> <!-- /.container -->
+  </nav>
+
+  <header>
+    <!-- Slider -->
+    <!-- Plugin bxslider.com -->
+    <div class="bxslider">
+      <div><img src="https://via.placeholder.com/1600x400?text=SLIDER" title="Funky roots"></div>
+      <!-- <div><img src="/assets/images/coffee2.jpg" title="The long and winding road"></div>
+      <div><img src="/assets/images/coffee3.jpg" title="Happy trees"></div> -->
+    </div>
+
+    <!-- Formulario principal -->
+    <form action="procesar-info.php" method="post">
+      <!-- <label for="">Nombre y apellido</label> -->
+      <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+      <input type="email" name="email" placeholder="mimail@mail.com" required>
+      <input type="tel" name="telefono" placeholder="Teléfono: 54 261 xxxxxx">    
+
+      <label for="check-in">check-in</label>
+      <input type="date" name="check-in">
+
+      <label for="check-out">check-out</label>
+      <input type="date" name="check-out">
+
+      <select name="habitacion" id="">
+        <option value="" disabled="true" selected>--Habitación--</option>
+        <option value="hab1">Standard</option>
+        <!-- selected="true" -->
+        <option value="hab2">Intermedia</option>
+        <option value="hab3">Presidencial</option>
+      </select>
+
+      <!-- Botón de enviar -->
+      <!-- <input type="submit" value="Enviar"> -->
+      <button type="submit">Enviar</button>
+    </form>
+  </header>
+
+  <hr>
+  <!-- Inicia el contenido principal del sitio -->
+  <main>
+    <section id="habitaciones">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Habitaciones</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <article>
+              <img src="" alt="">
+              <h3>Habitación Economy</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam nihil. Ea harum ad alias eos deleniti voluptas</p>
+              <a href="#modal-economy">Ver [+]</a>
+            </article>
+          </div>
+          <div class="col-4">
+            <article>
+              <img src="" alt="">
+              <h3>Habitación Intermedia</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam nihil. Ea harum ad alias eos deleniti voluptas</p>
+              <a href="#modal-intermedia">Ver [+]</a>
+            </article>
+          </div>
+          <div class="col-4">
+            <article>
+              <img src="" alt="">
+              <h3>Habitación Economy</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam nihil. Ea harum ad alias eos deleniti voluptas</p>
+              <a href="">Ver [+]</a>
+            </article>
+          </div>       
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </section>
+
+    <hr>
+
+    <section id="promociones">
+      <div class="container">
+        <div class="row">         
+          <div class="col-12">
+            <h2>Promociones</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <article>
+              <img src="https://via.placeholder.com/150x100" alt="">
+              <h3>Temporada baja</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam eius</p>
+              <div>
+                <img src="images/icons/desayuno.png" alt="" width="45">
+                <img src="images/icons/desayuno.png" alt="" width="45">
+                <img src="images/icons/desayuno.png" alt="" width="45">
+              </div>
+              <a href="#/">Ver [+]</a>
+            </article>
+          </div>
+          <div class="col-4">
+            <article>
+              <img src="https://via.placeholder.com/150x100" alt="">
+              <h3>Temporada baja</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam eius</p>
+              <div>
+                <img src="images/icons/desayuno.png" alt="" width="45">
+                <img src="images/icons/desayuno.png" alt="" width="45">
+                <img src="images/icons/desayuno.png" alt="" width="45">
+              </div>
+              <a href="#/">Ver [+]</a>
+            </article>
+          </div>
+          <div class="col-4">
+            <article>
+              <img src="https://via.placeholder.com/150x100" alt="">
+              <h3>Temporada baja</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam eius</p>
+              <div>
+                <img src="images/icons/desayuno.png" alt="" width="45">
+                <img src="images/icons/desayuno.png" alt="" width="45">
+                <img src="images/icons/desayuno.png" alt="" width="45">
+              </div>
+              <a href="#/">Ver [+]</a>
+            </article>
+          </div>
+        </div>
+      </div> 
+    </section>
+    <hr>
+
+    <aside id="opicion-clientes">
+      <img src="https://via.placeholder.com/1400x250?text=Opinión%20Clientes" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam, autem ratione officiis accusantium dignissimos odio! Voluptatem dolorem at, fugiat ipsum, minima soluta vero doloremque, mollitia laborum exercitationem possimus ratione!</p>
+      <p>Nombre del cliente</p>
+    </aside>
+    <hr>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="row">
+          <h2>Servicios</h2>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <article>
+              <img src="images/icons/lock.png" alt="">
+              <h3>Caja de seguridad</h3>              
+            </article>
+          </div>
+          <div class="col-3">
+            <article>
+              <img src="images/icons/lock.png" alt="">
+              <h3>Guardarropa</h3>              
+            </article>
+          </div>
+          <div class="col-3">
+            <article>
+              <img src="images/icons/lock.png" alt="">
+              <h3>Niñeras</h3>              
+            </article>
+          </div>
+          <div class="col-3">
+            <article>
+              <img src="images/icons/lock.png" alt="">
+              <h3>Caja de seguridad</h3>              
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <aside id="contacto">
+      <div class="container">
+        <div class="row">
+          <!-- Caja left -->
+          <div class="col-3">
+            <img src="images/logo.png" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aspernatur eaque nihil qui illo error consequuntur deserunt soluta officia recusandae a eius vitae laudantium amet quia voluptate, suscipit totam maxime.</p>
+          </div>
+
+          <div class="col-9">
+            <!-- Formulario -->
+            <form action="procesar-info.php" method="POST">
+              <input type="text" placeholder="Nombre y apellido" required>
+              <input type="email" placeholder="Email" required>
+              <textarea name="" id="" cols="30" rows="10">
+                Dejanos tu mensaje y a la brevedad nos pondremos en contacto con vos
+              </textarea>
+              <input type="submit" value="Enviar mensaje">
+            </form>
+          </div>
+
+          <!-- Caja bottom -->
+          <div class="col-12">
+            <a href="tel:542615015062">542615015062</a>
+            <a href="mailto:info@mihotel.com">info@mihotel.com</a>
+
+            <!-- Generar el vínculo para el mensaje directo en 
+              https://vilmanunez.com/crear-enlace-whatsapp/ -->
+            <a href="https://api.whatsapp.com/send?phone=542615015062&text=Me%20contacto%20desde%20la%20p%C3%A1gina%20del%20hotel!">WhatsApp</a>
+          </div>
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </aside>    
+
+  </main>
+  <footer>
+    <!-- Mapa -->
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10184.603019428716!2d-72.2512218!3d-50.3450935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa17ac7246faa45c1!2sTremun%20Kau%20Yat%C3%BAn%20Hotel%20de%20Campo!5e0!3m2!1ses!2sar!4v1594770112911!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <!-- Acá irá el sub-footer -->
+    <div>
+      <p>Diseñado y desarrollado por <a href="https://www.livingthewebla.com">Livingtheweb!</a></p>
+    </div>
+  </footer>
+
+<hr>
+<!-- Colamos acá el markup html de las ventanas modales -->
+<div id="modal-economy" class="modal_mask">
+  <!-- ACá iría el contenido de la ventana modal -->
+  <div>
+    <img src="" alt="">
+    <h3>Algo más sobre la habitación Economy</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ipsam impedit neque aut beatae debitis soluta</p>
+    <ul>
+      <li>Servicio</li>
+      <li>Servicio</li>
+      <li>Servicio</li>
+      <li>Servicio</li>
+      <li>Servicio</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-intermedia" class="modal_mask">
+  <!-- ACá iría el contenido de la ventana modal -->
+  <div>
+    <img src="" alt="">
+    <h3>Algo más sobre la habitación Intermedia</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ipsam impedit neque aut beatae debitis soluta</p>
+    <ul>
+      <li>Servicio</li>
+      <li>Servicio</li>
+      <li>Servicio</li>
+      <li>Servicio</li>
+      <li>Servicio</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
