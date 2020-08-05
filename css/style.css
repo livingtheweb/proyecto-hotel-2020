@@ -1,3 +1,13 @@
+/* Organización */
+/* 
+  > base
+  > helpers
+  > layout
+  > component
+  > page/sections
+
+*/
+
 body {
   background-color: aqua;
 }
@@ -83,3 +93,22 @@ col-5  ----- x
 .col-1 {
 	width: 8.33333333%;
 } 
+
+.navbar {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background-color:#ab2901;
+  z-index:999;
+}
+
+/* Componentes */
+.btn {
+  border:solid 2px black;
+}
+  .btn-contacto {
+    position:fixed;
+    right:8px;
+    bottom:8px;
+  }
