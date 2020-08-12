@@ -1,22 +1,144 @@
-/* Organización */
 /* 
-  > base
-  > helpers
-  > layout
-  > component
-  > page/sections
+  > BASE 
+    - Reset de los navegadores
+      > Usaremos https://necolas.github.io/normalize.css/
+    - typografía
+    - Seteos generales
+
+  > HELPERS
+    - clases especiales (de ayuda)
+
+  > LAYOUT 
+    - Grid system
+    - Estructuras principales (header, nav, aside, section, footer, etc)
+
+  > COMPONENTS (reusables)
+    - buttons
+    - navbar
+    - formularios
+    - ventanas modales
+    - sliders de imágenes o generales
+    - accordion
+    - tabs     
+
+  > PAGES
+    - páginas
+    - secciones
 
 */
 
-body {
-  background-color: aqua;
-}
-
+/* BASE
+----------------------- */
 /* Selector universal */
 * {
   box-sizing: border-box;
 }
 
+body {
+  font-family:Oswald, sans-serif;
+  font-size:18px;
+  line-height:1.4;
+}
+
+h1 {
+  margin:0;
+}
+img {
+  max-width:100%;
+}
+a {
+  text-decoration:none;
+  color:#000;
+}
+
+/* HELPERS
+----------------------- */
+.mt-15 {
+  margin-top:15px;
+}
+.mt-1 {
+  margin-top:10px;
+}
+.mb-15 {
+  margin-bottom:15px;
+}
+.mb-50 {
+  margin-bottom:50px;
+}
+.mt-30 {
+  margin-top:30px;
+}
+.center-block {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.float-right {
+  float:right;
+}
+.float-left {
+  float:left;
+}
+.bg-light {
+  background-color:#f8f9fa;
+}
+.bg-cian {
+  background-color:#09cccc;
+}
+.bg-lightgray {
+  background-color:#ecf0f1;
+  
+}
+.bg-black {
+  background-color:#000;
+  color:#fff;
+}
+.bg-white {
+  background-color:#fff;
+  color:#000;
+}
+.bg-green {
+  background-color:#009688;
+}
+.text-danger {
+  color:red;
+}
+.text-white {
+  color:#fff;
+}
+.text-center {
+  text-align:center;
+}
+.text-big {
+  font-size:48px;
+}
+.text-bg {
+  padding:8px 0;
+  background-color:rgba(0,0,0,.6);
+}
+.text-muted {
+  color:#6b6b6b;
+}
+.d-block {
+  display:block;
+}
+.d-inline {
+  display:inline;
+}
+.border {
+  border:solid 1px #000;
+}
+.radius-50 {
+  border-radius:50%;
+}
+.absolute {
+  position:absolute;
+  top:5px;
+  right:5px;
+}
+
+/* LAYOUT
+----------------------- */
 /* Grid system */
 .container {
   width:1200px;
@@ -94,21 +216,211 @@ col-5  ----- x
 	width: 8.33333333%;
 } 
 
+.navbar-brand {
+  margin:0;
+}
+.navbar-brand img {
+  width:100px;
+}
 .navbar {
   position:fixed;
   top:0;
   left:0;
   right:0;
-  background-color:#ab2901;
+  /* background-color:#ab2901; */
   z-index:999;
 }
+  .navbar-menu {
+    position: relative;
+    /* float: left; */
+    top: 25px;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .menu-item {  
+    position: relative;
+    float:left
+  }
+  .menu-link {
+    display:inline-block;
+    padding:10px 15px;
+    text-decoration: none;
+    color:#000;
+    text-transform: uppercase;
+  }
+    .menu-link:hover {
+      border-bottom:solid 3px lightcyan;
+    }
 
-/* Componentes */
-.btn {
-  border:solid 2px black;
+  .header {
+    width:100%;
+    height:100vh;
+    padding-top:130px;
+    position:relative;
+  }
+  /* 
+    .bg-header-main {
+      background:url("../images/08.jpg") no-repeat center center;
+      background-size:cover;
+    }   */
+     .header-title {
+      position:absolute;
+      width:80%;
+      top:20%;
+      margin:0px 10%;
+      padding:50px 40px;
+      font-size:58px;
+      color:#fff;
+      background-color:rgba(0,0,0,.45);
+      text-transform: uppercase;
+      font-weight: bold; 
+    } 
+     .form-header {
+      position:relative;
+      left:0;
+      right: 0;
+      bottom:0;
+      margin: 15px 0px;  
+      background-color: rgba(22,22,22,0.7);
+      line-height: 2.5;
+    }  
+    .form-header input,
+    .form-header select, 
+    .form-header textarea{
+      margin: 10px;
+      padding:5px 8px;
+      border: transparent;
+      border-radius: 3px;    
+      font-size: 14px;
+    }  
+
+   /* Formulario en aside */
+  .form-aside input,
+  .form-aside textarea {
+    display:block;
+    width:100%;
+    padding:12px 15px;
+    margin:15px 0;    
+  }
+
+
+/* COMPONENTS
+----------------------- */
+.modal_mask {
+  position:fixed;
+  top:-700px;
+  right:0;
+  bottom:0;
+  left:0;
+  background-color:rgba(0,0,0,.3);
+  opacity:0;
+  pointer-events:none;
+  transition:all 400ms ease-in-out;
 }
+.content {
+  max-width: 680px;
+  margin:100px auto;
+  padding:8px;
+  background-color:#fff;
+  color:#000;
+  border:solid 2px #000;
+  border-radius:8px;
+  text-align:center; 
+
+  /* Esto es para que el padre no colapse por los floats */
+  overflow:hidden;
+}
+
+.modal_mask:target {
+  opacity:1;
+  top:0px;
+  pointer-events: auto;
+}
+
+/* .btn-mobile {
+  position:absolute;
+  top:25px;
+  left:0;
+  font-size:45px;
+  display:none;
+} */
+.btn {
+  display: inline-block;
+  padding: .37rem .75rem;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;  
+  border: 1px solid #17a2b8;  
+}
+  .btn-large {
+    display:block;
+  }
+  .btn-danger {
+    background-color: #dc3545;    
+    border-color: #fff;
+    cursor:pointer;
+  }
+  .btn-danger:hover {
+    color: #fff;
+    /* background-color: #dc3545;
+    border-color: #dc3545; */
+  }
+  .btn-danger-outline {
+    color: #dc3545;
+    background-color: transparent;   
+    border-color: #dc3545;
+  }
+  .btn-danger-outline:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
   .btn-contacto {
     position:fixed;
     right:8px;
-    bottom:8px;
+    bottom:8px;    
+    padding: 10px 45px;
+    overflow: hidden;
+    border:none;
+    text-transform: uppercase;
+    background-color: #2ecc71;
+    color: #ecf0f1;  
   }
+
+
+/* SECTION/PAGES
+----------------------- */
+  /* Ventanas modales */
+/* El mismo CSS para todas las ventanas modales */
+
+
+/* Cuidado! Colocarle w 100% y float left a las sections de ser necesario */
+
+.section {
+  width: 100%;
+  padding: 50px 0px 100px 0;
+  position: relative;
+  float: left;
+}
+
+/* Text overlay / pendiente */
+
+
+ .divider {
+  width:100%;
+  height:40vh; 
+  position:relative;
+  float:left;
+}
+   .bg-divider {
+    background:url('../images/03.jpg') no-repeat center center fixed;     
+    background-size:cover;
+    opacity:.8;
+  } 
+
+
+  /* Habitaciones */
+
+  /* Promociones */

@@ -5,7 +5,20 @@
   <title>Hotel Kau Yatun | El mejor hotel del Sur argentino</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-16x16.png">
   <meta name="description" content="Acá va la descripción del sitio que se muestra en los resultados de búsqueda">
+  <!-- Fuentes externas -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600,700" rel="stylesheet">
+  
+  <!-- Normalizar estilos -->
+  <link rel="stylesheet" href="css/normalize.css"> 
 
+  <!-- Slider -->
+  <!-- Cudiado! Si no tienen internet, o se corta, no cargará los archivos 
+       necesarios para que funcione el slider! -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <!-- Main styles -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Cambia el color del navegador en celular --> 
@@ -16,35 +29,34 @@
   <!-- Sistema de grillas -->
   <!-- container > row > col -->
   <!-- El .container tendrá un ancho fijo en PX -->
-  <nav class="navbar">
+  <nav class="navbar bg-cian">
     <div class="container">
       <!-- Logo -->
       <div class="row">
         <div class="col-2">
-          <h1>
+          <h1 class="navbar-brand">
             <a href="index.html">
-              <img src="images/logo.png" alt="Hotel Kau Yatun">
+              <img src="images/logo.png" class="navbar-logo" alt="Hotel Kau Yatun">
             </a>
           </h1>
         </div>
         
-        <div class="col-8">
+        <div class="col-10">
             <!-- ul>li*6>a -->
             <!-- Menú principal -->
-            <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="#habitaciones">Habitaciones</a></li>
-              <li><a href="#promociones">Promociones</a></li>
-              <li><a href="#servicios">Servicios</a></li>
-              <li><a href="restaurante.html">Restaurante</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+            <ul class="navbar-menu float-right">
+              <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+              <li class="menu-item"><a href="#habitaciones" class="menu-link">Habitaciones</a></li>
+              <li class="menu-item"><a href="#promociones" class="menu-link">Promociones</a></li>
+              <li class="menu-item"><a href="#servicios" class="menu-link">Servicios</a></li>
+              <li class="menu-item"><a href="restaurante.html" class="menu-link">Restaurante</a></li>
+              <li class="menu-item"><a href="#contacto" class="menu-link">Contacto</a></li>
             </ul>
 
         </div>
 
        
-        <div class="col-2">
-          <!-- Idiomas -->
+        <div class="absolute">          
           <div>
             <a href="../index.html"><img src="images/esp.jpg" alt=""></a>
             <a href="en/index.html"><img src="images/flag-en.png" alt=""></a>
@@ -55,88 +67,102 @@
     </div> <!-- /.container -->
   </nav>
 
-  <header>
-    <!-- Slider -->
-    <!-- Plugin bxslider.com -->
-    <div class="bxslider">
-      <div><img src="https://via.placeholder.com/1600x400?text=SLIDER" title="Funky roots"></div>
-      <!-- <div><img src="/assets/images/coffee2.jpg" title="The long and winding road"></div>
-      <div><img src="/assets/images/coffee3.jpg" title="Happy trees"></div> -->
-    </div>
+  <!-- Coloco todo el header dentro de .container pues no irá con background -->
+  <div class="container">
+    <header style="margin-top:130px;">
+      <!-- Slider -->
+      <!-- Plugin bxslider.com -->
 
-    <!-- Formulario principal -->
-    <form action="procesar-info.php" method="post">
-      <!-- <label for="">Nombre y apellido</label> -->
-      <input type="text" name="nombre" placeholder="Nombre y apellido" required>
-      <input type="email" name="email" placeholder="mimail@mail.com" required>
-      <input type="tel" name="telefono" placeholder="Teléfono: 54 261 xxxxxx">    
+      <!-- Le agrego texto a las placas de slide -->
+      <div class="bxslider">
+        <div>
+          <h2 class="header-title text-center">Tierra de libertad y relax</h2>
+          <img src="images/slider-01.jpg" alt="">
+        </div>
+        <div>
+          <h2 class="header-title text-center">El mejor hotel de campo</h2>
+          <img src="images/slider-02.jpg" alt="">
+        </div>
+        <div>
+          <h2 class="header-title text-center">A metros del centro comercial</h2>
+          <img src="images/slider-03.jpg" alt="">
+        </div>     
+      </div>
 
-      <label for="check-in">check-in</label>
-      <input type="date" name="check-in">
+      <!-- Formulario principal -->
+      <form action="procesar-info.php" method="post" class="form-header">
+        <!-- <label for="">Nombre y apellido</label> -->
+        <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+        <input type="email" name="email" placeholder="mimail@mail.com" required>
+        <input type="tel" name="telefono" placeholder="Teléfono: 54 261 xxxxxx">    
 
-      <label for="check-out">check-out</label>
-      <input type="date" name="check-out">
+        <label for="check-in">check-in</label>
+        <input type="date" name="check-in">
 
-      <select name="habitacion" id="">
-        <option value="" disabled="true" selected>--Habitación--</option>
-        <option value="hab1">Standard</option>
-        <!-- selected="true" -->
-        <option value="hab2">Intermedia</option>
-        <option value="hab3">Presidencial</option>
-      </select>
+        <label for="check-out">check-out</label>
+        <input type="date" name="check-out">
 
-      <!-- Botón de enviar -->
-      <!-- <input type="submit" value="Enviar"> -->
-      <button type="submit">Enviar</button>
-    </form>
-  </header>
+        <select name="habitacion" id="">
+          <option value="" disabled="true" selected>--Habitación--</option>
+          <option value="hab1">Standard</option>
+          <!-- selected="true" -->
+          <option value="hab2">Intermedia</option>
+          <option value="hab3">Presidencial</option>
+        </select>
 
-  <hr>
+        <!-- Botón de enviar -->
+        <!-- <input type="submit" value="Enviar"> -->
+        <button type="submit">Enviar</button>
+      </form>
+    </header>
+  </div>
+
+  
   <!-- Inicia el contenido principal del sitio -->
   <main>
-    <section id="habitaciones">
-      <div class="container">
+    <section id="habitaciones" class="section bg-lightgray">
+      <div class="container">        
         <div class="row">
           <div class="col-12">
-            <h2>Habitaciones</h2>
+            <h2 class="text-center mb-50">Habitaciones</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-4">
-            <article>
-              <img src="" alt="">
+            <article class="text-center">
+              <img src="images/habitaciones/02.jpg" alt="">
               <h3>Habitación Economy</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam nihil. Ea harum ad alias eos deleniti voluptas</p>
-              <a href="#modal-economy">Ver [+]</a>
+              <a href="#modal-economy" class="btn btn-danger-outline">Ver [+]</a>
             </article>
           </div>
           <div class="col-4">
-            <article>
-              <img src="" alt="">
+            <article class="text-center">
+              <img src="images/habitaciones/01-superior.jpg" alt="">
               <h3>Habitación Intermedia</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam nihil. Ea harum ad alias eos deleniti voluptas</p>
-              <a href="#modal-intermedia">Ver [+]</a>
+              <a href="#modal-intermedia" class="btn btn-danger-outline">Ver [+]</a>
             </article>
           </div>
           <div class="col-4">
-            <article>
-              <img src="" alt="">
+            <article class="text-center">
+              <img src="images/habitaciones/01-suite.jpg" alt="">
               <h3>Habitación Economy</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, numquam nihil. Ea harum ad alias eos deleniti voluptas</p>
-              <a href="">Ver [+]</a>
+              <a href="#modal-economy" class="btn btn-danger-outline">Ver [+]</a>
             </article>
           </div>       
         </div> <!-- /.row -->
       </div> <!-- /.container -->
     </section>
 
-    <hr>
+    
 
-    <section id="promociones">
+    <section id="promociones" class="section text-center">
       <div class="container">
         <div class="row">         
           <div class="col-12">
-            <h2>Promociones</h2>
+            <h2 class="text-center mb-50">Promociones</h2>
           </div>
         </div>
         <div class="row">
@@ -182,16 +208,16 @@
         </div>
       </div> 
     </section>
-    <hr>
+    
 
-    <aside id="opicion-clientes">
-      <img src="https://via.placeholder.com/1400x250?text=Opinión%20Clientes" alt="">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam, autem ratione officiis accusantium dignissimos odio! Voluptatem dolorem at, fugiat ipsum, minima soluta vero doloremque, mollitia laborum exercitationem possimus ratione!</p>
-      <p>Nombre del cliente</p>
+     <!-- Acá irá una imagen de fondo, fija, con opiniones de clientes -->
+     <aside id="opinion-clientes" class="divider bg-divider">
+      <h3 class="text-white text-center text-big">Primera opinión</h3>
+      <p class="text-white text-center text-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia possimus voluptates maiores</p>
     </aside>
-    <hr>
+    
 
-    <section id="servicios">
+    <section id="servicios" class="section text-center bg-lightgray">
       <div class="container">
         <div class="row">
           <h2>Servicios</h2>
@@ -224,41 +250,49 @@
         </div>
       </div>
     </section>
-    <hr>
-
+    
     <aside id="contacto">
       <div class="container">
         <div class="row">
-          <!-- Caja left -->
           <div class="col-3">
-            <img src="images/logo.png" alt="">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aspernatur eaque nihil qui illo error consequuntur deserunt soluta officia recusandae a eius vitae laudantium amet quia voluptate, suscipit totam maxime.</p>
-          </div>
-
+            <!-- Caja left -->
+            <div>
+              <img src="images/logo.png" alt="">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit libero excepturi, asperiores aspernatur</p>
+            </div>
+          </div> <!-- /.col-3 -->
+          
           <div class="col-9">
-            <!-- Formulario -->
-            <form action="procesar-info.php" method="POST">
-              <input type="text" placeholder="Nombre y apellido" required>
-              <input type="email" placeholder="Email" required>
-              <textarea name="" id="" cols="30" rows="10">
-                Dejanos tu mensaje y a la brevedad nos pondremos en contacto con vos
-              </textarea>
-              <input type="submit" value="Enviar mensaje">
-            </form>
-          </div>
-
-          <!-- Caja bottom -->
+            <!-- Caja form -->
+            <div>
+              <form action="procesar-fromulario.php" class="form-aside" method="post">
+                <input type="text" placeholder="Nombre y apellido">
+                <input type="email" placeholder="Email">
+                <textarea name="mensaje" id="" cols="30" rows="10">
+                  Dejanos tu mensaje y a la brevedad nos pondremos en contacto con vos
+                </textarea>
+                <input type="submit" value="Enviar">
+              </form>
+            </div> 
+          </div> <!-- /.col-9 -->          
+        </div> <!-- /.row -->
+        <div class="row">
           <div class="col-12">
-            <a href="tel:542615015062">542615015062</a>
-            <a href="mailto:info@mihotel.com">info@mihotel.com</a>
+            <!-- Caja contacto -->
+            <div>
+              <a href="tel:542615015062">542615015062</a>
+              <a href="mailto:info@mihotel.com">info@mihotel.com</a>
 
-            <!-- Generar el vínculo para el mensaje directo en 
+              <!-- Generar el vínculo para el mensaje directo en 
               https://vilmanunez.com/crear-enlace-whatsapp/ -->
-            <a href="https://api.whatsapp.com/send?phone=542615015062&text=Me%20contacto%20desde%20la%20p%C3%A1gina%20del%20hotel!">WhatsApp</a>
-          </div>
+              <a href="https://api.whatsapp.com/send?phone=542615015062&text=Me%20contacto%20desde%20la%20p%C3%A1gina%20del%20hotel!">WhatsApp</a>
+            </div>
+          </div> <!-- /.col-12 -->
         </div> <!-- /.row -->
       </div> <!-- /.container -->
-    </aside>    
+
+    </aside>
+      
 
   </main>
   <footer>
@@ -273,40 +307,53 @@
     </div>
   </footer>
 
-<hr>
+
 <!-- Colamos acá el markup html de las ventanas modales -->
 <div id="modal-economy" class="modal_mask">
-  <!-- ACá iría el contenido de la ventana modal -->
-  <div>
-    <img src="" alt="">
-    <h3>Algo más sobre la habitación Economy</h3>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ipsam impedit neque aut beatae debitis soluta</p>
-    <ul>
-      <li>Servicio</li>
-      <li>Servicio</li>
-      <li>Servicio</li>
-      <li>Servicio</li>
-      <li>Servicio</li>
-    </ul>
+  <!-- Acá iría el contenido de la ventana modal -->
+  <div class="content">
+    <a href="#/" class="cerrar float-right">Cerrar</a>
+    <div class="row">
+      <div class="col-6">
+        <img src="images/20.jpg" alt="">
+      </div>
+      <div class="col-6">
+        <h3>Algo más sobre la habitación economy</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ipsam impedit neque aut beatae debitis soluta</p> 
+      </div>
+    </div>
+    
+       
   </div>
 </div>
 
 <div id="modal-intermedia" class="modal_mask">
-  <!-- ACá iría el contenido de la ventana modal -->
-  <div>
-    <img src="" alt="">
-    <h3>Algo más sobre la habitación Intermedia</h3>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ipsam impedit neque aut beatae debitis soluta</p>
-    <ul>
-      <li>Servicio</li>
-      <li>Servicio</li>
-      <li>Servicio</li>
-      <li>Servicio</li>
-      <li>Servicio</li>
-    </ul>
+  <!-- Acá iría el contenido de la ventana modal -->
+  <div class="content">
+    <a href="#/" class="cerrar float-right">Cerrar</a>
+    <div class="row">
+      <div class="col-6">
+      <img src="images/18.jpg" alt="">
+    </div>
+    <div class="col-6">
+      <h3>Algo más sobre la habitación Intermedia</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ipsam impedit neque aut beatae debitis soluta</p>
+      <ul>
+        <li>Servicio</li>
+        <li>Servicio</li>
+        <li>Servicio</li>
+        <li>Servicio</li>
+        <li>Servicio</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <a href="#" class="btn btn-contacto">Contactanos</a>
+<script>
+  $(document).ready(function(){
+    $('.bxslider').bxSlider();
+  });
+</script>
 </body>
 </html>
