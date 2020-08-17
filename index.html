@@ -44,7 +44,13 @@
         <div class="col-10">
             <!-- ul>li*6>a -->
             <!-- Menú principal -->
-            <ul class="navbar-menu float-right">
+
+             <!-- Menú mobile 
+            ---------------------- -->
+            <!-- <a href="#navbar-menu" class="btn-mobile">
+              <span class="menu-mobile">=</span>          
+            </a> -->
+            <ul id="navbar-menu" class="navbar-menu float-right">
               <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
               <li class="menu-item"><a href="#habitaciones" class="menu-link">Habitaciones</a></li>
               <li class="menu-item"><a href="#promociones" class="menu-link">Promociones</a></li>
@@ -90,7 +96,7 @@
       </div>
 
       <!-- Formulario principal -->
-      <form action="procesar-info.php" method="post" class="form-header">
+      <form action="procesar-info.php" method="post" class="form-header text-center text-white">
         <!-- <label for="">Nombre y apellido</label> -->
         <input type="text" name="nombre" placeholder="Nombre y apellido" required>
         <input type="email" name="email" placeholder="mimail@mail.com" required>
@@ -112,7 +118,7 @@
 
         <!-- Botón de enviar -->
         <!-- <input type="submit" value="Enviar"> -->
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn btn-danger">Enviar</button>
       </form>
     </header>
   </div>
@@ -124,7 +130,7 @@
       <div class="container">        
         <div class="row">
           <div class="col-12">
-            <h2 class="text-center mb-50">Habitaciones</h2>
+            <h2 class="section-heading center-block text-center mb-50">Habitaciones</h2>
           </div>
         </div>
         <div class="row">
@@ -162,47 +168,47 @@
       <div class="container">
         <div class="row">         
           <div class="col-12">
-            <h2 class="text-center mb-50">Promociones</h2>
+            <h2 class="section-heading center-block text-center mb-50">Promociones</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-4">
             <article>
-              <img src="https://via.placeholder.com/150x100" alt="">
-              <h3>Temporada baja</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam eius</p>
-              <div>
-                <img src="images/icons/desayuno.png" alt="" width="45">
-                <img src="images/icons/desayuno.png" alt="" width="45">
-                <img src="images/icons/desayuno.png" alt="" width="45">
+              <img src="images/promociones/primera-vez.png" alt="">
+              <h3>Promo primera vez</h3>
+              <p>-15% de descuento si es la primera vez que te alojás con nosotros</p>
+              <div class="mb-15">
+
+                <!-- SE ve pixelado pues es un archivo PNG -->
+               <!-- <img src="images/icons/hotel.png" alt="" width="45"> -->
+
+               <!-- Ahora no se ve pixelado pues es formato SVG (es decir, imagen vectorial para web) -->
+               <img src="images/icons/hotel.svg" alt="" width="45">
+              
               </div>
-              <a href="#/">Ver [+]</a>
+              <a href="#/" class="btn btn-danger-outline">Ver [+]</a>
             </article>
           </div>
           <div class="col-4">
             <article>
-              <img src="https://via.placeholder.com/150x100" alt="">
-              <h3>Temporada baja</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam eius</p>
-              <div>
-                <img src="images/icons/desayuno.png" alt="" width="45">
-                <img src="images/icons/desayuno.png" alt="" width="45">
-                <img src="images/icons/desayuno.png" alt="" width="45">
+              <img src="images/promociones/fecha-flexible.png" alt="">
+              <h3>Reserva flexible</h3>
+              <p>Atentos a la situación actual podés reservar y luego modificar la fecha</p>
+              <div class="mb-15">
+                <img src="images/icons/hotel.svg" alt="" width="45">
               </div>
-              <a href="#/">Ver [+]</a>
+              <a href="#/" class="btn btn-danger-outline">Ver [+]</a>
             </article>
           </div>
           <div class="col-4">
             <article>
-              <img src="https://via.placeholder.com/150x100" alt="">
-              <h3>Temporada baja</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam eius</p>
-              <div>
-                <img src="images/icons/desayuno.png" alt="" width="45">
-                <img src="images/icons/desayuno.png" alt="" width="45">
-                <img src="images/icons/desayuno.png" alt="" width="45">
+              <img src="images/promociones/especial-navidad.png" alt="">
+              <h3>Preventa Navidad 2020</h3>
+              <p>Ingresando 20 de Diciembre. Preventa anticipada hasta el 31 de Agosto.</p>
+              <div class="mb-15">
+                <img src="images/icons/hotel.svg" alt="" width="45">
               </div>
-              <a href="#/">Ver [+]</a>
+              <a href="#/" class="btn btn-danger-outline">Ver [+]</a>
             </article>
           </div>
         </div>
@@ -220,38 +226,42 @@
     <section id="servicios" class="section text-center bg-lightgray">
       <div class="container">
         <div class="row">
-          <h2>Servicios</h2>
+          <h2 class="section-heading center-block text-center mb-50">Servicios</h2>
         </div>
         <div class="row">
           <div class="col-3">
-            <article>
+            <article class="box">
               <img src="images/icons/lock.png" alt="">
-              <h3>Caja de seguridad</h3>              
+              <h3>Servicio de transporte al aeropuerto</h3>   
+              <p class="text-black-50">Si usted necesita movilizarse desde el aeropuerto o desde el hotel, pregunte en recepción por nuestro servicio de transporte al aeropuerto. Tenemos capacidad de llevar hasta 6 pasajeros en cada viaje</p>            
             </article>
           </div>
           <div class="col-3">
-            <article>
+            <article class="box">
               <img src="images/icons/lock.png" alt="">
-              <h3>Guardarropa</h3>              
+              <h3>Gimnasio</h3>  
+              <p class="text-black-50">Nuestro gimnasio gratuito dispone de todas las máquinas de ejercicio que usted necesite como una cinta para correr, una bicicleta estática, una máquina elíptica y pesas.</p>            
             </article>
           </div>
           <div class="col-3">
-            <article>
+            <article class="box">
               <img src="images/icons/lock.png" alt="">
-              <h3>Niñeras</h3>              
+              <h3>Feel Safe</h3> 
+              <p class="text-black-50">Una de nuestras principales prioridades es proteger a nuestros huéspedes y trabajadores. Por eso, determinados servicios podrían no estar disponibles en este hotel durante tu estancia. </p>             
             </article>
           </div>
           <div class="col-3">
-            <article>
+            <article class="box">
               <img src="images/icons/lock.png" alt="">
-              <h3>Caja de seguridad</h3>              
+              <h3>Piscina</h3>    
+              <p class="text-black-50">Nuestra piscina al aire libre es un magnífco lugar para refrescarse cuando el sol está muy picante. Rodeada de una tarima de madera, la piscina dispone de silas reclinables y toallas para los huéspedes. </p>          
             </article>
           </div>
         </div>
       </div>
     </section>
     
-    <aside id="contacto">
+    <aside id="contacto" class="section">
       <div class="container">
         <div class="row">
           <div class="col-3">
@@ -279,7 +289,7 @@
         <div class="row">
           <div class="col-12">
             <!-- Caja contacto -->
-            <div>
+            <div class="text-right">
               <a href="tel:542615015062">542615015062</a>
               <a href="mailto:info@mihotel.com">info@mihotel.com</a>
 
@@ -295,16 +305,22 @@
       
 
   </main>
-  <footer>
+  <footer class="footer">
     <!-- Mapa -->
-    <div>
+    <div class="mapa">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10184.603019428716!2d-72.2512218!3d-50.3450935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa17ac7246faa45c1!2sTremun%20Kau%20Yat%C3%BAn%20Hotel%20de%20Campo!5e0!3m2!1ses!2sar!4v1594770112911!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
 
     <!-- Acá irá el sub-footer -->
-    <div>
-      <p>Diseñado y desarrollado por <a href="https://www.livingthewebla.com">Livingtheweb!</a></p>
+    <!-- Este es el elemento que colapsa; usraemos la clase clearfix -->
+    <div class="bg-black clearfix">
+      <div class="container">
+        <div class="footer-right">
+          <p>Desarrollado con <img src="" alt=""> por <span style="color:rgb(255,0,255)">Livingtheweb!</span></p>
+        </div>          
+      </div> <!-- /.container -->
     </div>
+    
   </footer>
 
 
