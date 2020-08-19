@@ -167,73 +167,76 @@ la parte aterior (after) */
   padding-right:15px;
   max-width:100%;
 }
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
 
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  position:relative;
-  float:left;
-  min-height:1px;
-  padding-left:15px;
-  padding-right:15px;
-}
+@media screen and (min-width:768px) {
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 
-/* 
-col-12 ----- 100%
-col-5  ----- x
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    position:relative;
+    float:left;
+    min-height:1px;
+    padding-left:15px;
+    padding-right:15px;
+  }
 
-*/
+  /* 
+  col-12 ----- 100%
+  col-5  ----- x
 
-.col-12 {
-	width:100%;
-}
-.col-11 {
-	width: 91.66666667%;
-}
-.col-10 {
-	width: 83.33333333%;
-}
-.col-9 {
-	width: 75%;
-}
-.col-8 {
-	width: 66.66666667%;
-}
-.col-7 {
-	width: 58.33333333%;
-}
-.col-5 {
-	width:41.666666%;
-}
-.col-6 {
-	width: 50%;
-}  
-.col-4 {
-	width: 33.33333333%;
-}
-.col-3 {
-	width: 25%;
-}
-.col-2 {
-	width: 16.66666667%;
-}
-.col-1 {
-	width: 8.33333333%;
-} 
+  */
 
+  .col-12 {
+    width:100%;
+  }
+  .col-11 {
+    width: 91.66666667%;
+  }
+  .col-10 {
+    width: 83.33333333%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-8 {
+    width: 66.66666667%;
+  }
+  .col-7 {
+    width: 58.33333333%;
+  }
+  .col-5 {
+    width:41.666666%;
+  }
+  .col-6 {
+    width: 50%;
+  }  
+  .col-4 {
+    width: 33.33333333%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-2 {
+    width: 16.66666667%;
+  }
+  .col-1 {
+    width: 8.33333333%;
+  } 
+
+}
 .navbar-brand {
   margin:0;
 }
@@ -346,7 +349,6 @@ col-5  ----- x
   padding: 8px;
   box-shadow: 0 6px 12px rgba(0,0,0,.23);
   
-
   /* No hemos visto esta propiedad */
   transform:scale(1,1);
   transition:transform 400ms ease-in-out;
@@ -436,7 +438,7 @@ col-5  ----- x
     border-color: #dc3545;
   }
   .btn-contacto {
-    /* position:fixed; */
+    position:fixed;
     right:8px;
     bottom:8px;    
     padding: 10px 45px;
