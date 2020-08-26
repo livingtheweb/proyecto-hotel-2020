@@ -168,6 +168,84 @@ la parte aterior (after) */
   max-width:100%;
 }
 
+
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  position:relative;
+  float:left;
+  min-height:1px;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.col-12 {
+  width:100%;
+}
+.col-11 {
+  width: 91.66666667%;
+}
+.col-10 {
+  width: 83.33333333%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-8 {
+  width: 66.66666667%;
+}
+.col-7 {
+  width: 58.33333333%;
+}
+.col-5 {
+  width:41.666666%;
+}
+.col-6 {
+  width: 50%;
+}  
+.col-4 {
+  width: 33.33333333%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-1 {
+  width: 8.33333333%;
+} 
+
+/* Selector avanzado */
+/* @media screen and (max-width:768px) {
+  div[class*="col-"] {
+    width:100%;
+  }
+} */
+
+/* Selectores avanzados */
+/* [class*="sarasa"] {
+  color:red;
+}
+a[href*="ltw"] {
+  color:red;
+} */
+
 @media screen and (min-width:768px) {
   .row {
     margin-right: -15px;
@@ -192,12 +270,6 @@ la parte aterior (after) */
     padding-left:15px;
     padding-right:15px;
   }
-
-  /* 
-  col-12 ----- 100%
-  col-5  ----- x
-
-  */
 
   .col-12 {
     width:100%;
@@ -235,8 +307,8 @@ la parte aterior (after) */
   .col-1 {
     width: 8.33333333%;
   } 
+} 
 
-}
 .navbar-brand {
   margin:0;
 }
@@ -270,8 +342,12 @@ la parte aterior (after) */
     color:#000;
     text-transform: uppercase;
   }
+    .menu-link {
+      border-bottom:solid 3px transparent;
+    }
     .menu-link:hover {
-      border-bottom:solid 3px lightcyan;
+      /* border-bottom:solid 3px lightcyan; */
+      border-color:lightcyan;
     }
 
   .header {
@@ -335,13 +411,13 @@ la parte aterior (after) */
 
 /* COMPONENTS
 ----------------------- */
-/* .btn-mobile {
-  position:absolute;
-  top:25px;
-  left:0;
-  font-size:45px;
+.btn-mobile {
+  position: absolute;
+  top: 53px;
+  left: -68px;
+  font-size: 45px;
   display:none;
-} */
+} 
 
 /* Es sólo una idea de cómo lo pueden trabajar según o visto en clase; se puede mejorar mucho! */
 .box {
@@ -398,13 +474,6 @@ la parte aterior (after) */
   pointer-events: auto;
 }
 
-/* .btn-mobile {
-  position:absolute;
-  top:25px;
-  left:0;
-  font-size:45px;
-  display:none;
-} */
 .btn {
   display: inline-block;
   padding: .37rem .75rem;
@@ -503,9 +572,41 @@ la parte aterior (after) */
     margin:0;
   }
 
-  /* Habitaciones */
 
-  /* Promociones */
+/* Ajustes responsive 
+---------------------- */
+@media screen and (max-width:1040px) {
+  .box {
+    height:auto;
+  }
+  .mb-xs-30 {
+    margin-bottom:30px;
+  }
+}
+  /* Menú hamburguesa */
+  @media screen and (max-width:992px) {
+    .btn-mobile {
+      display:block;
+    }
+    .navbar-menu {
+      position:absolute;
+      top: 92px;
+      left: -138px;
+      /* background-color:red; */
+      background-color:rgba(255,255,255,.8);
+      opacity:0;
+    }
+    .menu-item {
+      float:none;
+    }
+    .btn-mobile:hover ~ .navbar-menu,
+    .navbar-menu:hover {
+      opacity:1;
+    }
+  }
+
+  
+ 
 
 
 
