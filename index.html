@@ -367,8 +367,12 @@
 
 <a href="#" class="btn btn-contacto">Contactanos</a>
 <script>
-  $(document).ready(function(){
-    $('.bxslider').bxSlider();
+   $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      mode: 'fade',
+      auto: true,
+      default:500     
+    });
   });
 </script>
 </body>
